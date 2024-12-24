@@ -40,8 +40,7 @@ public class User implements UserDetails, Principal {
     private Boolean enabled;
 
     //! the Owning Side of the relation: any update on USER affects the join table USER_ROLE
-    @ManyToMany(fetch = FetchType.EAGER)
-    //* when a User gets retrieved from the database, the associated Role entities are also retrieved immediately, in the same query.
+    @ManyToMany(fetch = FetchType.EAGER)     //* when a User gets retrieved from the database, the associated Role entities are also retrieved immediately, in the same query.
     private List<Role> roles;
 
     @CreatedDate
