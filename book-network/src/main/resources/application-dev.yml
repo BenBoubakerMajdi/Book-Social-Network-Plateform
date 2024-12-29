@@ -12,13 +12,13 @@ spring:
       hibernate:
         format_sql: true
     database: postgresql
-    database-plateform: org.hibernate.dialect.PostgreSLDialect
+    database-plateform: org.hibernate.dialect.PostgreSQLDialect
 
   mail:
     host: localhost
     port: 1025
-    username: hedoulty
-    password:
+    username: majdi
+    password: majdi
     properties:
       mail:
         smtp:
@@ -35,3 +35,8 @@ application:
     jwt:
       secret-key: MSAv1BT3C0sZcnZdmAQARbFzRiZE0Dxv
       expiration: 8640000
+  mailing:
+    frontend:
+      activation_url: http://localhost:4200/activate-account
+server:
+  port: 8088
