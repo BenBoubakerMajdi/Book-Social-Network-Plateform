@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring6.SpringTemplateEngine;
 
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,7 +41,7 @@ public class EmailService {
             templateName = emailTemplate.name();
         }
 
-        //! creating MimeMessage (MIME is a protocol that allows email to include multiple types of content, such as plain text, HTML, attachments, images, and other multimedia elements, all within the same message.)
+        //! Creating MimeMessage (MIME is a protocol that allows email to include multiple types of content, such as plain text, HTML, attachments, images, and other multimedia elements, all within the same message.)
         MimeMessage mimeMessage = mailSender.createMimeMessage();
 
         MimeMessageHelper helper = new MimeMessageHelper(
